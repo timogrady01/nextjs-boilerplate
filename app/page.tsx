@@ -1,5 +1,4 @@
-'use  client'
-<h1>Testing Deployment - April 28</h1>
+'use client'
 
 import { useState } from 'react'
 import Link from 'next/link'
@@ -36,7 +35,7 @@ export default function Home() {
   return (
     <main>
       <Header />
-      
+      <h1>Testing Deployment - April 28</h1>
       <section className="hero">
         <div className="container">
           <div className="hero-content">
@@ -46,7 +45,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
       <section className="experience">
         <div className="container">
           <h2>25+ Years of Automotive Experience</h2>
@@ -61,7 +60,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
       <section className="services">
         <div className="container">
           <h2>Our Vehicle Locator Services</h2>
@@ -89,7 +88,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
       <section className="process">
         <div className="container">
           <h2>How It Works</h2>
@@ -118,7 +117,7 @@ export default function Home() {
           <Link href="/customer-info" className="btn">Start Your Search Now</Link>
         </div>
       </section>
-
+      
       <section className="testimonials">
         <div className="container">
           <h2>What Our Customers Say</h2>
@@ -136,14 +135,14 @@ export default function Home() {
             {testimonials.map((_, index) => (
               <span 
                 key={index} 
-                className={`control ${index === activeTestimonial ? 'active' : ''}`}
-                onClick={() => setActiveTestimonial(index)}
+                className={`control ${index === activeTestimonial ? 'active' : ''}`} 
+                onClick={() => setActiveTestimonial(index)} 
               ></span>
             ))}
           </div>
         </div>
       </section>
-
+      
       <section className="cta">
         <div className="container">
           <h2>Ready to Find Your Perfect Vehicle?</h2>
@@ -156,3 +155,4 @@ export default function Home() {
     </main>
   )
 }
+
