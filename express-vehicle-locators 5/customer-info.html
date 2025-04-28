@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Vehicle - Express Vehicle Locators</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Express Vehicle Locators</h1>
+                <p>Professional Vehicle Finding Service</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="customer-info.html" class="active">Find Your Vehicle</a></li>
+                    <li><a href="finance.html">Financing</a></li>
+                    <li><a href="trade-in.html">Trade-In Value</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Find Your Perfect Vehicle</h1>
+            <p>Tell us what you're looking for, and we'll find it for you at the best possible price.</p>
+        </div>
+    </section>
+
+    <section class="customer-info">
+        <div class="container">
+            <div class="form-container">
+                <h2>Vehicle Requirements</h2>
+                <p>Please provide as much detail as possible about the vehicle you're looking for. The more specific you are, the better we can match your needs.</p>
+                
+                <form id="vehicle-form" action="submit-form.php" method="POST">
+                    <h3>Vehicle Details</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="vehicle-year">Preferred Year</label>
+                            <select id="vehicle-year" name="vehicle-year" required>
+                                <option value="">Select Year</option>
+                                <option value="2025">2025</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                                <option value="older">2014 or older</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="vehicle-make">Make</label>
+                            <select id="vehicle-make" name="vehicle-make" required>
+                                <option value="">Select Make</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                                <option value="Honda">Honda</option>
+                                <option value="GMC">GMC</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Chrysler">Chrysler</option>
+                                <option value="Jeep">Jeep</option>
+                                <option value="Dodge">Dodge</option>
+                                <option value="Ram">Ram</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Audi">Audi</option>
+                                <option value="Lexus">Lexus</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="vehicle-model">Model</label>
+                        <input type="text" id="vehicle-model" name="vehicle-model" placeholder="e.g., Camry, C-Class, Civic" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="vehicle-type">Vehicle Type</label>
+                            <select id="vehicle-type" name="vehicle-type">
+                                <option value="">Select Type</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Truck">Truck</option>
+                                <option value="Coupe">Coupe</option>
+                                <option value="Convertible">Convertible</option>
+                                <option value="Wagon">Wagon</option>
+                                <option value="Van">Van</option>
+                                <option value="Hatchback">Hatchback</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="vehicle-trim">Trim Level (if known)</label>
+                            <input type="text" id="vehicle-trim" name="vehicle-trim" placeholder="e.g., LE, Sport, Limited">
+                        </div>
+                    </div>
+                    
+                    <h3>Price Range</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="min-price">Minimum Price</label>
+                            <select id="min-price" name="min-price">
+                                <option value="">No Minimum</option>
+                                <option value="10000">$10,000</option>
+                                <option value="15000">$15,000</option>
+                                <option value="20000">$20,000</option>
+                                <option value="25000">$25,000</option>
+                                <option value="30000">$30,000</option>
+                                <option value="35000">$35,000</option>
+                                <option value="40000">$40,000</option>
+                                <option value="45000">$45,000</option>
+                                <option value="50000">$50,000</option>
+                                <option value="60000">$60,000</option>
+                                <option value="70000">$70,000</option>
+                                <option value="80000">$80,000</option>
+                                <option value="90000">$90,000</option>
+                                <option value="100000">$100,000+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="max-price">Maximum Price</label>
+                            <select id="max-price" name="max-price">
+                                <option value="">No Maximum</option>
+                                <option value="15000">$15,000</option>
+                                <option value="20000">$20,000</option>
+                                <option value="25000">$25,000</option>
+                                <option value="30000">$30,000</option>
+                                <option value="35000">$35,000</option>
+                                <option value="40000">$40,000</option>
+                                <option value="45000">$45,000</option>
+                                <option value="50000">$50,000</option>
+                                <option value="60000">$60,000</option>
+                                <option value="70000">$70,000</option>
+                                <option value="80000">$80,000</option>
+                                <option value="90000">$90,000</option>
+                                <option value="100000">$100,000</option>
+                                <option value="150000">$150,000</option>
+                                <option value="200000">$200,000+</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <h3>Mileage Preferences</h3>
+                    
+                    <div class="form-group">
+                        <label for="max-mileage">Maximum Mileage</label>
+                        <select id="max-mileage" name="max-mileage">
+                            <option value="">No Preference</option>
+                            <option value="10000">Under 10,000 miles</option>
+                            <option value="30000">Under 30,000 miles</option>
+                            <option value="50000">Under 50,000 miles</option>
+                            <option value="75000">Under 75,000 miles</option>
+                            <option value="100000">Under 100,000 miles</option>
+                            <option value="150000">Under 150,000 miles</option>
+                        </select>
+                    </div>
+                    
+                    <h3>Features & Options</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Must-Have Features</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="feature-leather" name="features[]" value="Leather Seats">
+                                <label for="feature-leather">Leather Seats</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="feature-sunroof" name="features[]" value="Sunroof/Moonroof">
+                                <label for="feature-sunroof">Sunroof/Moonroof</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="feature-navigation" name="features[]" value="Navigation System">
+                                <label for="feature-navigation">Navigation System</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="feature-bluetooth" name="features[]" value="Bluetooth">
+                                <label for="feature-bluetooth">Bluetooth</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="feature-backup" name="features[]" value="Backup Camera">
+                                <label for="feature-backup">Backup Camera</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="feature-thirdrow" name="features[]" value="Third Row Seating">
+                                <label for="feature-thirdrow">Third Row Seating</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Drivetrain Preference</label>
+                            <div class="checkbox-group">
+                                <input type="radio" id="drivetrain-any" name="drivetrain" value="Any" checked>
+                                <label for="drivetrain-any">Any</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="radio" id="drivetrain-awd" name="drivetrain" value="AWD/4WD">
+                                <label for="drivetrain-awd">AWD/4WD</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="radio" id="drivetrain-fwd" name="drivetrain" value="Front Wheel Drive">
+                                <label for="drivetrain-fwd">Front Wheel Drive</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="radio" id="drivetrain-rwd" name="drivetrain" value="Rear Wheel Drive">
+                                <label for="drivetrain-rwd">Rear Wheel Drive</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="additional-features">Additional Features or Requirements</label>
+                        <textarea id="additional-features" name="additional-features" rows="4" data-word-count="word-count"></textarea>
+                        <div class="form-note" id="word-count">0 words</div>
+                    </div>
+                    
+                    <h3>Contact Information</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customer-name">Full Name</label>
+                            <input type="text" id="customer-name" name="customer-name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-email">Email Address</label>
+                            <input type="email" id="customer-email" name="customer-email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customer-phone">Phone Number</label>
+                            <input type="tel" id="customer-phone" name="customer-phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferred-contact">Preferred Contact Method</label>
+                            <select id="preferred-contact" name="preferred-contact">
+                                <option value="Email">Email</option>
+                                <option value="Phone">Phone</option>
+                                <option value="Text">Text Message</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timeline">How soon are you looking to purchase?</label>
+                        <select id="timeline" name="timeline">
+                            <option value="Immediately">Immediately</option>
+                            <option value="1-2 weeks">1-2 weeks</option>
+                            <option value="1 month">Within 1 month</option>
+                            <option value="3 months">Within 3 months</option>
+                            <option value="Just researching">Just researching</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to be contacted by Express Vehicle Locators regarding my vehicle search.</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn">Submit Vehicle Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Let Us Do The Work For You</h2>
+            <p>With our extensive network and 25+ years of experience, we'll find your perfect vehicle at the best possible price.</p>
+            <a href="contact.html" class="btn">Contact Us Directly</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Express Vehicle Locators</h3>
+                    <p>Professional Vehicle Finding Service</p>
+                    <p>25+ Years of Automotive Experience</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 6860 North Dallas Parkway Ste #200</p>
+                    <p>PLANO, Texas, 75024, United States</p>
+                    <p><i class="fas fa-phone"></i> 469-468-9712</p>
+                    <p><i class="fas fa-envelope"></i> info@expressvehiclelocators.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="customer-info.html">Find Your Vehicle</a></li>
+                        <li><a href="finance.html">Financing</a></li>
+                        <li><a href="trade-in.html">Trade-In Value</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Express Vehicle Locators. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
